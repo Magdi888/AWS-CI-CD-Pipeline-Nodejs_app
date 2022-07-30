@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage('deploy') {
+        stage('build') {
             steps {
                 script {
                     gv.BuildImage()
