@@ -11,7 +11,7 @@ def BuildImage() {
 }
 
 def Deploy() {
-    sh 'docker run -p 3000:3000 -d amagdi888/my-repo:NodeJS-rds-redis'
+    sh 'docker run --env-file /home/ubuntu/env -p 3000:3000 -d amagdi888/my-repo:NodeJS-rds-redis'
 }
 
 return this
