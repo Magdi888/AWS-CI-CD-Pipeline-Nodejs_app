@@ -12,10 +12,9 @@ pipeline {
         }
 
         stage('deploy') {
-            agent { node { label 'ec2-slave' } }
             steps {
                 script {
-                    gv.Deploy()
+                    gv.BuildImage()
                 }
                 
             }
